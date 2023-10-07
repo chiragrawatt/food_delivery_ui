@@ -1,0 +1,39 @@
+.work-card {
+    display: flex;
+    padding: 4vmax 2vmax;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 50vw; 
+        height: 25vw;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content:center;
+        gap: 1vw;
+        width: 20vw;
+    }
+
+    @include sm {
+        flex-direction: column;
+
+        img {
+            width: 60vw;
+            height: 40vw;
+        }
+
+        div {
+            margin-top: 5vh;
+            width: 80%;
+            align-items: center;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

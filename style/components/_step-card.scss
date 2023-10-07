@@ -1,0 +1,17 @@
+.step-card {
+    display: flex;
+    flex-direction: column;
+    padding: 4vmax 2vmax;
+    
+    img {
+        width: 25vw; 
+    }
+
+    @include sm {
+        padding: 2vw 7vw;
+
+        img {
+            width: 60vw;
+        }
+    }
+}

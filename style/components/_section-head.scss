@@ -1,0 +1,12 @@
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: $box-border;
+    border-bottom: $box-border;
+    height: 7vmax;
+
+    & > img {
+        width: 2em;
+    }
+}

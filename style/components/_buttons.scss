@@ -1,0 +1,25 @@
+@mixin btn($val) {
+    border: none;
+    background-color: $val;
+    color: white;
+    padding: $base-box-padding $base-box-padding * 3;
+    border-radius: $base-box-border-radius;
+}
+
+.btn-primary {
+    @include btn($primary);
+    &:hover {
+        background-color: $primary-light;
+    }
+}
+
+.btn-outlined {
+    @include btn($secondary);
+    border: 1.5px solid $primary;
+    font-weight: 500;
+    color: $primary;
+    &:hover {
+        background-color: $primary;
+        color: white;
+    }
+}

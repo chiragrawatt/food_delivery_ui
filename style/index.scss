@@ -1,0 +1,188 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css);
+
+@import '_variables';
+@import '_text-types';
+@import '_breakpoint';
+@import './components/buttons';
+@import './components/section-head';
+@import './components/step-card';
+@import './components/work-card';
+@import './components/order-card';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $secondary;
+
+    & > * {
+        margin: 0px $base-horizontal-margin;
+    }
+
+    @include lg {
+        font-size: 13px;
+    }
+
+    @include md {
+        font-size: 10px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1vmax;
+
+    .txt-head {
+        font-weight: 900;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 1.2vmax;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    & > img {
+        display: none;
+        height: 30px; 
+
+        @include md {
+            display: block;
+        }
+    }
+}
+
+#top-section {
+    padding: 8vmax 0px;
+
+    div {
+        width: 60%;
+        align-items: center;
+
+        @include md {
+            width: 80%;
+        }
+
+        span {
+            text-align: center;
+            font-size: 4em;
+            line-height: 1.2em;
+        }
+        
+        .input-holder {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1vmax;
+            margin-top: 30px;
+            width: 80%;
+            & > div {
+                display: flex;
+                border-radius: $base-box-border-radius;
+                padding: $base-box-padding $base-box-padding*2;
+                background-color: white;
+                input {
+                    border: none;
+                    font-weight: 450;
+                    width: 100%;
+
+                    &:focus {
+                        border: none;
+                        outline: none;
+                    }
+                }
+                img {
+                    width: 1em;
+                }
+            }
+        }
+    }
+}
+
+#roll-img {
+    position: absolute;
+    width: 14vw;
+    height: auto;
+    left: $base-horizontal-margin;
+    top: 100px;
+
+    @include lg {
+        display: none;
+    }
+}
+
+#pizza-img {
+    position: absolute;
+    width: 12vw;
+    height: auto;
+    right: $base-horizontal-margin;
+    top: 310px;
+
+    @include lg {
+        display: none;
+    }
+}
+
+#steps-container {
+    display: flex;
+    justify-content: space-between;
+    
+    #step-card-1, #step-card-2 {
+        border-right: $box-border;
+    }
+
+    @include sm {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+        #step-card-1, #step-card-2 {
+            border-width: 0;
+            border-bottom: $box-border;
+        }
+    }
+}
+
+#works-container {
+    & > div:nth-child(1), & > div:nth-child(2) {
+        border-bottom: $box-border;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 7vmax;
+    background-color: $accent;
+    margin: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 2px;
+
+    .txt-head {
+        font-weight: 900;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary;
+        font-size: 0.85em;
+    }
+
+    & > div {
+        display: flex;
+        gap: 6vw;
+
+        & > nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5vw;
+        }
+    }
+}
